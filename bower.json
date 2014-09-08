@@ -1,0 +1,8 @@
+{
+  "name": "markdown-viewer",
+  "private": true,
+  "dependencies": {
+    "marked": "~0.3.2",
+    "github-markdown-css": "~1.1.1"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Markdown Viewer",
+  "version": "0.1",
+  "description": "Enables viewing styled Markdown files in Chrome. Inspired by Markdown Preview.",
+  "icons": {
+    "128": "icon.png",
+    "48": "icon.png",
+    "16": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*.md",       "http://*/*.md*"      , "file://*/*.md",
+        "https://*/*.markdown", "http://*/*.markdown*", "file://*/*.markdown",
+        "https://*/*.text",     "http://*/*.text"     , "file://*/*.text"
+      ],
+      "js": [
+        "components/marked/lib/marked.js",
+        "index.js"
+      ]
+    }
+  ],
+  "permissions": ["tabs", "<all_urls>"],
+  "web_accessible_resources": [
+    "components/github-markdown-css/github-markdown.css"
+  ]
+}
