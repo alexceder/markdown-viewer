@@ -20,6 +20,9 @@
     wrapper.className = 'markdown-body';
     wrapper.innerHTML = html;
 
+    var elems = wrapper.getElementsByClassName('foobar');
+    elems[0].innerHTML = window.katex.renderToString(elems[0].innerHTML);
+
     /**
      * Some styling of the body element and appending
      * of the markdown wrapper.
@@ -27,7 +30,7 @@
     document.body.innerHTML = '';
     document.body.style.maxWidth = '790px';
     document.body.style.margin = '0 auto';
-    document.body.style.padding = '8px 8px 32px 8px';
+    document.body.style.padding = '32px 8px';
     document.body.appendChild(wrapper);
 
     /**
@@ -37,5 +40,11 @@
     css.rel = 'stylesheet';
     css.href = chrome.extension
         .getURL('components/github-markdown-css/github-markdown.css');
+    document.head.appendChild(css);
+
+    css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = chrome.extension
+        .getURL('katex.min.css');
     document.head.appendChild(css);
 }());

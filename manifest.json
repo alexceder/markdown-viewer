@@ -17,12 +17,18 @@
       ],
       "js": [
         "components/marked/lib/marked.js",
+        "katex.min.js",
         "index.js"
       ]
     }
   ],
-  "permissions": ["tabs", "<all_urls>"],
+  "permissions": [
+    "tabs",
+    "<all_urls>"
+  ],
   "web_accessible_resources": [
-    "components/github-markdown-css/github-markdown.css"
+    "components/github-markdown-css/github-markdown.css",
+    "fonts/*",
+    "katex.min.css"
   ]
 }
