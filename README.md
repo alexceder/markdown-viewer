@@ -11,11 +11,12 @@ Extension not yet in store. For now:
 3. Open ``chrome://extensions`` in Chrome.
 4. Enable developer mode.
 5. Load the package.
+6. Make sure Chrome has a compatible default encoding.
+    - Just keep it UTF-8 everywhere and you should be fine.
 
 ## TODO
 
 - Implement LaTeX support (working on implementing KaTeX in dev branch)
-- Some character bust the Javascript URI decoding. Need to research/fix this.
 - Make it GUI customizable that may:
     - Edit which URLs gets rendered.
     - Add exceptions to sites that should not be rendered.

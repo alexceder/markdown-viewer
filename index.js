@@ -4,14 +4,9 @@
         css;
 
     /**
-     * Chrome does not show utf-8 characters in a good way
-     * for some reason. Should probably ask this to someone
-     * that knows and maybe works on Chrome. However the
-     * decodeURIComponent(escape(..)) combination solves it.
+     * Make some HTML.
      */
-    html = window.marked(
-        decodeURIComponent(escape(document.body.innerText))
-    );
+    html = window.marked(document.body.innerText);
 
     /**
      * We better make a wrapper element for the html.
